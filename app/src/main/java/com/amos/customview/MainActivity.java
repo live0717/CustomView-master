@@ -17,5 +17,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CustomArcActivity.class));
             }
         });
+        findViewById(R.id.rvMultipleItem).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MultipleActivity.class));
+            }
+        });
     }
 }
