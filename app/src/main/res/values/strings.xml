@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CustomView-master</string>
+    <string name="float_action_button_behavior" translatable="false">com.amos.customview.BehaviorDefault</string>
 </resources>

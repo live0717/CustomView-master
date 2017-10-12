@@ -3,6 +3,7 @@
           package="com.amos.customview">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +20,30 @@
         </activity>
         <activity android:name=".CustomArcActivity"/>
         <activity android:name=".MultipleActivity"/>
+        <activity
+            android:name=".CollapseActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity android:name=".df.DFActivity"/>
+        <activity android:name=".BottomDialogActivity"/>
+        <activity android:name=".reader.MainReaderActivity"/>
+        <activity
+            android:name=".bookread.BookReaderActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".baserecyclerview.RVActivity"/>
+
+        <service android:name=".mdialog.CustomService"/>
+        <activity android:name=".baserecyclerview.refreshandmore.RefreshMoreActivity"/>
     </application>
 
 </manifest>

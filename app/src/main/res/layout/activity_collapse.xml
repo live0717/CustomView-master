@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/lvToDoList"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@style/transparentText"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:id="@+id/llHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/bg"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/book_detail_cover_iv"
+                        android:layout_width="55dp"
+                        android:layout_height="75dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cover_default"/>
+
+
+                    <TextView
+                        android:id="@+id/book_detail_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/book_detail_cover_iv"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="武侠世界自由行"
+                        android:textColor="#ff0000"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/book_detail_author_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book_detail_title_tv"
+                        android:layout_toEndOf="@+id/book_detail_cover_iv"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="w风雪 | "
+                        android:textColor="#ff0000"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/book_detail_category_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book_detail_title_tv"
+                        android:layout_toEndOf="@id/book_detail_author_iv"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="仙侠 | "
+                        android:textColor="#ff0000"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/book_detail_word_count_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book_detail_title_tv"
+                        android:layout_toEndOf="@id/book_detail_category_tv"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="594万字"
+                        android:textColor="#ff0000"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/book_detail_later_update_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book_detail_author_iv"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/book_detail_cover_iv"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="4月前"
+                        android:textColor="#ff0000"
+                        android:textSize="13sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book_detail_later_update_tv"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/book_detail_join_collection_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_common_btn_solid_selector"
+                            android:clickable="true"
+                            android:drawablePadding="5dp"
+                            android:padding="10dp"
+                            android:text="开始追书"
+                            android:textColor="@color/white"/>
+
+                        <Button
+                            android:id="@+id/book_detail_read_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_common_btn_solid_selector"
+                            android:clickable="true"
+                            android:drawablePadding="5dp"
+                            android:padding="10dp"
+                            android:text="开始阅读"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="?attr/homeAsUpIndicator"
+                app:title="折叠布局"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCol"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_share"
+        app:layout_anchor="@id/lvToDoList"
+        app:layout_behavior="com.amos.customview.FabBehavior"
+        app:layout_anchorGravity="bottom|right|end"/>
+
+</android.support.design.widget.CoordinatorLayout>
