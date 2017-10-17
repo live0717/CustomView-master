@@ -13,6 +13,7 @@ import com.amos.customview.bookread.BookReaderActivity;
 import com.amos.customview.df.DFActivity;
 import com.amos.customview.mdialog.CustomService;
 import com.amos.customview.reader.MainReaderActivity;
+import com.amos.customview.rxjava2.RxJavaDemoActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -99,6 +100,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 RVActivity.startActivity(MainActivity.this);
+            }
+        });
+        findViewById(R.id.btnRxJava).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RxJavaDemoActivity.startActivity(MainActivity.this);
             }
         });
     }

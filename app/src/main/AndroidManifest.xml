@@ -43,7 +43,9 @@
         <activity android:name=".baserecyclerview.RVActivity"/>
 
         <service android:name=".mdialog.CustomService"/>
+
         <activity android:name=".baserecyclerview.refreshandmore.RefreshMoreActivity"/>
+        <activity android:name=".rxjava2.RxJavaDemoActivity"/>
     </application>
 
 </manifest>
