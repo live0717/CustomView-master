@@ -14,6 +14,7 @@ import com.amos.customview.df.DFActivity;
 import com.amos.customview.mdialog.CustomService;
 import com.amos.customview.reader.MainReaderActivity;
 import com.amos.customview.rxjava2.RxJavaDemoActivity;
+import com.amos.customview.rxjava2.RxJavaOperatorActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -106,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 RxJavaDemoActivity.startActivity(MainActivity.this);
+            }
+        });
+        findViewById(R.id.btnOperators).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RxJavaOperatorActivity.startActivity(MainActivity.this);
             }
         });
     }

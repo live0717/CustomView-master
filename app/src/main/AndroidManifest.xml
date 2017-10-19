@@ -46,6 +46,7 @@
 
         <activity android:name=".baserecyclerview.refreshandmore.RefreshMoreActivity"/>
         <activity android:name=".rxjava2.RxJavaDemoActivity"/>
+        <activity android:name=".rxjava2.RxJavaOperatorActivity"/>
     </application>
 
 </manifest>

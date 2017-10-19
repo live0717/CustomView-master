@@ -83,6 +83,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RxJava使用实例"/>
+
+            <Button
+                android:id="@+id/btnOperators"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RxJava转换操作符"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
