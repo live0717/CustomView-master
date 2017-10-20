@@ -36,12 +36,12 @@ import io.reactivex.schedulers.Schedulers;
  * Desc
  */
 
-public class RxJavaOperatorActivity extends AppCompatActivity {
+public class ConversionOperatorActivity extends AppCompatActivity {
 
-    public static final String TAG = "RxJavaOperatorActivity";
+    public static final String TAG = "ConversionOperatorActivity";
 
     public static void startActivity(Context context) {
-        context.startActivity(new Intent(context, RxJavaOperatorActivity.class));
+        context.startActivity(new Intent(context, ConversionOperatorActivity.class));
     }
 
     @Override

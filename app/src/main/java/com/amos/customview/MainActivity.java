@@ -9,12 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.amos.customview.baserecyclerview.RVActivity;
-import com.amos.customview.bookread.BookReaderActivity;
-import com.amos.customview.df.DFActivity;
 import com.amos.customview.mdialog.CustomService;
-import com.amos.customview.reader.MainReaderActivity;
-import com.amos.customview.rxjava2.RxJavaDemoActivity;
-import com.amos.customview.rxjava2.RxJavaOperatorActivity;
+import com.amos.customview.rxjava2.RxJavaMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,48 +36,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.btnArcProgress).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnCustomUI).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CustomArcActivity.class));
+            public void onClick(View v) {
+                UIDemoActivity.startActivity(MainActivity.this);
             }
         });
-        findViewById(R.id.rvMultipleItem).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MultipleActivity.class));
-            }
-        });
-        findViewById(R.id.rvCollapsing).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CollapseActivity.class));
-            }
-        });
-        findViewById(R.id.btnDF).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, DFActivity.class));
-            }
-        });
-        findViewById(R.id.btnBTS).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, BottomDialogActivity.class));
-            }
-        });
-        findViewById(R.id.btnReader).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainReaderActivity.startActivity(MainActivity.this);
-            }
-        });
-        findViewById(R.id.btnBookReader).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                BookReaderActivity.startActivity(MainActivity.this);
-            }
-        });
+
         findViewById(R.id.btnStartService).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,16 +64,10 @@ public class MainActivity extends AppCompatActivity {
                 RVActivity.startActivity(MainActivity.this);
             }
         });
-        findViewById(R.id.btnRxJava).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnRxJavaMain).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxJavaDemoActivity.startActivity(MainActivity.this);
-            }
-        });
-        findViewById(R.id.btnOperators).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RxJavaOperatorActivity.startActivity(MainActivity.this);
+                RxJavaMainActivity.startActivity(MainActivity.this);
             }
         });
     }
