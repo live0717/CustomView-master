@@ -18,6 +18,68 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="filter操作符"/>
+
+            <Button
+                android:id="@+id/btnOfTypeUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ofType操作符"/>
+
+
+            <Button
+                android:id="@+id/btnTakeUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="take操作符"/>
+
+            <Button
+                android:id="@+id/btnTakeLastUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="takeLast操作符"/>
+
+            <Button
+                android:id="@+id/btnTakeUntilUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="takeUntil操作符"/>
+
+            <Button
+                android:id="@+id/btnTakeWhileUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="takeWhile操作符"/>
+
+            <Button
+                android:id="@+id/btnSkipUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="skip操作符"/>
+
+            <Button
+                android:id="@+id/btnSkipLastUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="skipLast操作符"/>
+
+            <Button
+                android:id="@+id/btnDebounceUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Debounce操作符"/>
+
+            <Button
+                android:id="@+id/btnElementAt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="elementAt/elementAtOrDefault操作符"/>
+
+            <Button
+                android:id="@+id/btnSampleUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample操作符"/>
+
         </LinearLayout>
     </ScrollView>
 

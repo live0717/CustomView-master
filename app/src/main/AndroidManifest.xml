@@ -50,6 +50,7 @@
         <activity android:name=".rxjava2.FilterOperatorActivity"/>
         <activity android:name=".UIDemoActivity"/>
         <activity android:name=".rxjava2.RxJavaMainActivity"/>
+        <activity android:name=".rxjava2.CreateOperatorActivity"/>
     </application>
 
 </manifest>
