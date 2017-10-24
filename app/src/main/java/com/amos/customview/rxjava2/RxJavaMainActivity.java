@@ -43,5 +43,17 @@ public class RxJavaMainActivity extends AppCompatActivity {
                 FilterOperatorActivity.startActivity(RxJavaMainActivity.this);
             }
         });
+        findViewById(R.id.btnCreate).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CreateOperatorActivity.startActivity(RxJavaMainActivity.this);
+            }
+        });
+        findViewById(R.id.btnOtherUse).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OtherOperatorActivity.startActivity(RxJavaMainActivity.this);
+            }
+        });
     }
 }

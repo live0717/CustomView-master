@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnZipUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="zip操作符使用"/>
+
+            <Button
+                android:id="@+id/btnCombineLatestUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="combineLatest操作符使用"/>
+
+            <Button
+                android:id="@+id/btnMergeUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="merge操作符使用"/>
+
+            <Button
+                android:id="@+id/btnOnErrorReturnUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="onErrorReturn操作符使用"/>
+
+            <Button
+                android:id="@+id/btnOnErrorResumeNextUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="onErrorResumeNext操作符使用"/>
+
+            <Button
+                android:id="@+id/btnRetryUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="retry操作符使用"/>
+
+            <Button
+                android:id="@+id/btnRetryWhenUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="retryWhen操作符使用"/>
+
+            <Button
+                android:id="@+id/btnToMapUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="toMap操作符使用"/>
+            <Button
+                android:id="@+id/btnDoOnEachUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="doOnEach操作符使用"/>
+            <Button
+                android:id="@+id/btnDoOnNextUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="doOnNext操作符使用"/>
+            <Button
+                android:id="@+id/btnDoOnSubscribeUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="doOnSubscribe操作符使用"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

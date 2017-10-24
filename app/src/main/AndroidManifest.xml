@@ -51,6 +51,7 @@
         <activity android:name=".UIDemoActivity"/>
         <activity android:name=".rxjava2.RxJavaMainActivity"/>
         <activity android:name=".rxjava2.CreateOperatorActivity"/>
+        <activity android:name=".rxjava2.OtherOperatorActivity"/>
     </application>
 
 </manifest>
