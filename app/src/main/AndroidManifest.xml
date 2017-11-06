@@ -52,6 +52,8 @@
         <activity android:name=".rxjava2.RxJavaMainActivity"/>
         <activity android:name=".rxjava2.CreateOperatorActivity"/>
         <activity android:name=".rxjava2.OtherOperatorActivity"/>
+        <activity android:name=".eventbus.EventBusActivity"/>
+        <activity android:name=".eventbus.TestActivity"/>
     </application>
 
 </manifest>

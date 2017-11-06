@@ -11,6 +11,7 @@ import android.view.View;
 import com.amos.customview.R;
 
 import java.util.Map;
+import java.util.concurrent.Callable;
 
 import io.reactivex.Notification;
 import io.reactivex.Observable;
@@ -114,6 +115,57 @@ public class OtherOperatorActivity extends AppCompatActivity {
                 doOnSubscribeUse();
             }
         });
+        findViewById(R.id.btnMaterializeUse).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                materializeUse();
+            }
+        });
+        findViewById(R.id.btnUsingUse).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                usingUse();
+            }
+        });
+    }
+
+    private void usingUse() {
+        Observable.using(new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                return "this is a test";
+            }
+        }, new Function<String, ObservableSource<String>>() {
+            @Override
+            public ObservableSource<String> apply(@NonNull String s) throws Exception {
+                return Observable.just(s);
+            }
+        }, new Consumer<String>() {
+            @Override
+            public void accept(String s) throws Exception {
+                Log.d(TAG, "------->"+s);
+            }
+        }).subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(new Consumer<String>() {
+            @Override
+            public void accept(String s) throws Exception {
+                Log.d(TAG, s);
+            }
+        });
+    }
+
+    private void materializeUse() {
+        Observable.just("this", "is", "a", "test")
+                .materialize()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<Notification<String>>() {
+                    @Override
+                    public void accept(Notification<String> stringNotification) throws Exception {
+                        Log.d(TAG, stringNotification.toString());
+                    }
+                });
     }
 
     private void doOnSubscribeUse() {

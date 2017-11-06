@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.amos.customview.baserecyclerview.RVActivity;
+import com.amos.customview.eventbus.EventBusActivity;
 import com.amos.customview.mdialog.CustomService;
 import com.amos.customview.rxjava2.RxJavaMainActivity;
 
@@ -68,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 RxJavaMainActivity.startActivity(MainActivity.this);
+            }
+        });
+        findViewById(R.id.btnEventBus).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EventBusActivity.startActivity(MainActivity.this);
             }
         });
     }

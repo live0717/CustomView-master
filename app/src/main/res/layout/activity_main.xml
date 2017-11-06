@@ -46,6 +46,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RxJava使用示例"/>
+
+            <Button
+                android:id="@+id/btnEventBus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EventBus使用示例"/>
         </LinearLayout>
 
     </ScrollView>
